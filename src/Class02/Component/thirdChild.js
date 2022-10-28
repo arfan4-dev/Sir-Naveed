@@ -3,7 +3,7 @@ function thirdChild(){
     return(
     <div>
         I'm thirdChild
-        <Button title="HTML TAGS"/>
+        <Button color="red" title="HTML TAGS"/>
     </div>
     )
 }

@@ -5,7 +5,7 @@ function secondChild(){
     <div>
         I'm secondChild
         <ThirdChild/>
-        <Button title="HTML LEARN"/>
+        <Button color="green" title="HTML LEARN"/>
     </div>
     )
 }
