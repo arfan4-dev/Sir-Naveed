@@ -4,6 +4,7 @@ function Parent(){
     <div>
         I'm Parent
         <div><Child/></div>
+        <table></table>
     </div>
     )
 }
