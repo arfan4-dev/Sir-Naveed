@@ -1,23 +1,19 @@
 import React from 'react'
-export const Data =
-  [{
-      name:"Arfan",
-      Rollno:2545,
-      Batch:"MAD",
-      class:"API dev"
-     },
-    { Name:"usman",
-     Rollno:2575,
-     Batch:"MAD",
-     class:"API dev"
-    },
-    { Name:"Talha",
-    Rollno:2575,
-    Batch:"MAD",
-    class:"API dev"
-   },
-   { Name:"Aqsa",
-   Rollno:2575,
-   Batch:"MAD",
-   class:"API dev"
-  }]
+
+export const student=[{
+    name:"Arfan",
+    roll:"1234",
+    batch:"MAD",
+    class:"API"
+},{
+    name:"Usman",
+    roll:"4321",
+    batch:"MAD",
+    class:"API"
+},
+{
+    name:"TALHA",
+    roll:"2134",
+    batch:"MAD",
+    class:"API"
+}]
