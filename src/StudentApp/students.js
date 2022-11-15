@@ -11,6 +11,7 @@ const StudentList = () => {
   const [batch, setBatch] = useState("")
   const [stuClass, setClass] = useState("")
   const [flag,setFlag]=useState(false)
+  const [UpdateIndex,setIndex]=useState(0)
   function AddHanlder() {
     if (name != "" && roll != "" && batch != "" && stuClass != "") {
       var NewStudent = {
@@ -43,8 +44,9 @@ const StudentList = () => {
       // console.log(index)
       setStudents([...filterStudent])
   }
-  const updateHandler=(student)=>{
+  const updateHandler=(student,index)=>{
     // console.log(student)
+    setIndex(index)
 setName(student.name)
       setRoll(student.roll)
       setBatch(student.batch)
@@ -52,7 +54,7 @@ setName(student.name)
       setFlag(true)
   }
 
-  const ctaUpdateHandler=()=>{
+  const ctaUpdateHandler=(index)=>{
     if (name != "" && roll != "" && batch != "" && stuClass != "") {
       var NewStudent = {
         name,
@@ -62,12 +64,21 @@ setName(student.name)
       }
 
 
-      let listofStudent = NewStudent
-      setStudents([...students, listofStudent])
+      let updateStudent = students.map((stu,i)=>{
+        if(UpdateIndex==i){
+          return NewStudent
+        }
+
+        else{
+          return stu
+        }
+      })
+      setStudents([...updateStudent])
       setName("")
       setRoll("")
       setBatch("")
       setClass("")
+      setFlag(false)
     }
     else {
       setErrorMessage("Error occure, Please fill all blanks")

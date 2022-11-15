@@ -11,7 +11,7 @@ const allStudent = ({data, deleteHandler,index,updateHandler}) => {
             <td>{data.batch}</td>
             <td>{data.class}</td>
             <td> <button onClick={()=>deleteHandler(index)}> Delete </button></td>
-            <td> <button onClick={()=>updateHandler(data)}> Update </button></td>
+            <td> <button onClick={()=>updateHandler(data,index)}> Update </button></td>
 
         </tr>
     )
